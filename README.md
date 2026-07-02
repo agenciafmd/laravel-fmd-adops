@@ -18,7 +18,8 @@ Primeiro, vamos solicitar a url do Webhook ao time de Adops.
 Colocamos esta url no nosso .env
 
 ```dotenv
-FMD_DIGITAL_WEBHOOK=https://adops.fmd.digital/api/webhooks/generic/xxxxxxx
+FMD_ADOPS_WEBHOOK=https://adops.fmd.digital/api/webhooks/generic/xxxxxxx
+FMD_ADOPS_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## Uso
