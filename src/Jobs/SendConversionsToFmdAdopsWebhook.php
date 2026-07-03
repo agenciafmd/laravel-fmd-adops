@@ -78,7 +78,7 @@ final class SendConversionsToFmdAdopsWebhook implements ShouldQueue
             ]);
 
             if (($response->getStatusCode() !== 200) && (config('laravel-fmd-adops.error_email'))) {
-                Mail::raw($response->getBody(), static function (Message $message): void {
+                Mail::raw((string) $response->getBody(), static function (Message $message): void {
                     $message->to(config('laravel-fmd-adops.error_email'))
                         ->subject('[F&MD Adops][' . config('app.url') . '] - Falha na integração - ' . now()->format('d/m/Y H:i:s'));
                 });
