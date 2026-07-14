@@ -69,7 +69,7 @@ final class SendConversionsToFmdAdopsWebhook implements ShouldQueue
             );
 
             $response = $client->request('POST', config('laravel-fmd-adops.webhook'), [
-                'json' => $payload,
+                'body' => $payload,
                 'headers' => [
                     'Accept' => 'application/json',
                     'Content-Type' => 'application/json',
